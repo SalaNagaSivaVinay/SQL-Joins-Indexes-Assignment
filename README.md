@@ -16,7 +16,7 @@ This project contains SQL scripts for creating sample data, performing various j
 
 ### Step 2: Run Joins Queries
 1. Copy the content of `joins_queries.sql`.
-2. Run the queries to test INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, and SELF JOIN examples.
+2. Run the queries to test INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, SELF JOIN and CROSS JOIN examples.
 
 ### Step 3: Run Indexes Queries
 1. Copy the content of `indexes_queries.sql`.
