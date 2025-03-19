@@ -1,51 +1,49 @@
-# SQL Assignment
+# SQL Database Project
 
-This repository contains SQL scripts demonstrating the use of **Joins** and **Indexes** with sample data for effective database management and query optimization.
+This project contains SQL scripts for creating sample data, performing various join operations, and implementing indexes for database optimization.
 
-## 📂 File Structure
+## 📂 Files Overview
+- **`sample_data.sql`** - Contains sample data for Employees, Departments, and Orders tables.
+- **`joins_queries.sql`** - Contains SQL queries for practicing different types of joins.
+- **`indexes_queries.sql`** - Contains SQL queries to create and manage indexes for performance improvement.
 
-- **`joins_queries.sql`** – Contains examples of various SQL joins:
-  - INNER JOIN
-  - LEFT JOIN
-  - RIGHT JOIN
-  - FULL JOIN
-  - CROSS JOIN
-  - SELF JOIN
-  - NATURAL JOIN
+## 🚀 Instructions
 
-- **`indexes_queries.sql`** – Contains examples of different SQL index types:
-  - Clustered Index
-  - Non-Clustered Index
-  - Unique Index
-  - Composite Index
+### Step 1: Run Sample Data Script
+1. Copy the content of `sample_data.sql`.
+2. Paste it into your SQL environment (e.g., DB Fiddle, MySQL Workbench, etc.).
+3. Run the script to create and populate the tables.
 
-- **`sample_data.sql`** – Includes sample data for Employees, Departments, and Orders tables.
+### Step 2: Run Joins Queries
+1. Copy the content of `joins_queries.sql`.
+2. Run the queries to test INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, and SELF JOIN examples.
 
-## 🚀 How to Use
+### Step 3: Run Indexes Queries
+1. Copy the content of `indexes_queries.sql`.
+2. Run the queries to create indexes and improve database query performance.
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/YourUsername/SQL_Assignment.git
-   ```
-2. Open your SQL client (e.g., MySQL Workbench, pgAdmin, etc.).
-3. Execute the `sample_data.sql` file to populate the database with sample data.
-4. Run the `joins_queries.sql` or `indexes_queries.sql` file to test the respective SQL operations.
-
-## 💻 Example Execution
-
-For MySQL:
-```sql
-SOURCE path/to/sample_data.sql;
-SOURCE path/to/joins_queries.sql;
-SOURCE path/to/indexes_queries.sql;
+### Step 4: GitHub Submission
+1. After updating your files in VS Code, run the following commands in the terminal:
+```bash
+git add .
+git commit -m "Updated SQL scripts with improved queries"
+git push
 ```
 
-For PostgreSQL:
-```sql
-\i path/to/sample_data.sql
-\i path/to/joins_queries.sql
-\i path/to/indexes_queries.sql
-```
+2. Copy your GitHub repository link and submit it as the final solution.
+
+### Step 5: DB Fiddle Link Generation (For Published Link)
+1. Visit [DB Fiddle](https://dbfiddle.uk/).
+2. Paste the content of `sample_data.sql` followed by `joins_queries.sql` and `indexes_queries.sql`.
+3. Click **Run** to test the code.
+4. Click on **Share** and copy the generated link.
+5. Submit this link along with your GitHub repository link.
+
+## 📌 Notes
+- Ensure you run `sample_data.sql` before executing the other scripts.
+- For any errors or unexpected results, review the comments in the code for guidance.
+
+Happy coding! 😊
 
 ## 📬 Contact
 For any queries or clarifications, feel free to reach out via [LinkedIn](https://www.linkedin.com/in/naga-siva-vinay-sala-3b0312259/).

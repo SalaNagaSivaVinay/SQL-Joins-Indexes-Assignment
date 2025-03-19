@@ -1,41 +1,16 @@
--- Sample Data for Indexes Assignment
+-- Indexes Queries for SQL Assignment
 
--- Creating Orders Table
-CREATE TABLE Orders (
-    OrderID INT PRIMARY KEY,
-    CustomerName VARCHAR(50),
-    OrderDate DATE,
-    TotalAmount DECIMAL(10, 2)
-);
+-- 1. Creating an Index on Employees Table for DepartmentID
+CREATE INDEX idx_department_id ON Employees(DepartmentID);
 
-INSERT INTO Orders 
-VALUES
-(1, 'John Doe', '2024-01-15', 1500.00),
-(2, 'Jane Smith', '2024-02-10', 2000.00),
-(3, 'Alice Johnson', '2024-03-05', 750.00),
-(4, 'Michael Brown', '2024-04-12', 1200.00);
+-- 2. Creating an Index on Employees Table for ManagerID
+CREATE INDEX idx_manager_id ON Employees(ManagerID);
 
--- Creating Clustered Index (automatically created on PRIMARY KEY)
--- No additional command needed, as OrderID is already a PRIMARY KEY.
+-- 3. Creating an Index on Orders Table for CustomerName (to improve search performance)
+CREATE INDEX idx_customer_name ON Orders(CustomerName);
 
--- Creating Non-Clustered Index
--- Improves performance when searching by CustomerName
-CREATE NONCLUSTERED INDEX idx_CustomerName
-ON Orders (CustomerName);
+-- 4. Creating a Composite Index for faster Order lookups based on OrderDate and TotalAmount
+CREATE INDEX idx_order_date_amount ON Orders(OrderDate, TotalAmount);
 
--- Creating Unique Index
--- Ensures each OrderDate is unique
-CREATE UNIQUE INDEX idx_UniqueOrderDate
-ON Orders (OrderDate);
-
--- Creating Composite Index
--- Useful for queries involving multiple columns in WHERE conditions
-CREATE INDEX idx_CompositeIndex
-ON Orders (CustomerName, OrderDate);
-
--- Query Performance Testing
--- Before Indexes: Full table scan
-SELECT * FROM Orders WHERE CustomerName = 'John Doe';
-
--- After Indexes: Improved query speed using index search
-EXPLAIN SELECT * FROM Orders WHERE CustomerName = 'John Doe';
+-- 5. Dropping an Index Example (if needed)
+DROP INDEX idx_manager_id ON Employees;

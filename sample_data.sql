@@ -1,23 +1,45 @@
 -- Sample Data for SQL Assignment
 
--- Employees Table
-INSERT INTO Employees (EmpID, Name, DepartmentID, ManagerID) 
+-- Creating Employees Table
+CREATE TABLE Employees (
+    EmpID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    DepartmentID INT,
+    ManagerID INT
+);
+
+-- Creating Departments Table
+CREATE TABLE Departments (
+    DepartmentID INT PRIMARY KEY,
+    DepartmentName VARCHAR(50)
+);
+
+-- Creating Orders Table
+CREATE TABLE Orders (
+    OrderID INT PRIMARY KEY,
+    CustomerName VARCHAR(50),
+    OrderDate DATE,
+    TotalAmount DECIMAL(10, 2)
+);
+
+-- Inserting Sample Data into Employees Table
+INSERT INTO Employees (EmpID, Name, DepartmentID, ManagerID)
 VALUES
 (1, 'Alice', 101, NULL),
 (2, 'Bob', 102, 1),
 (3, 'Charlie', 103, 1),
 (4, 'David', 101, 2);
 
--- Departments Table
-INSERT INTO Departments (DepartmentID, DepartmentName) 
+-- Inserting Sample Data into Departments Table
+INSERT INTO Departments (DepartmentID, DepartmentName)
 VALUES
 (101, 'HR'),
 (102, 'IT'),
 (103, 'Finance'),
 (104, 'Marketing');
 
--- Orders Table
-INSERT INTO Orders (OrderID, CustomerName, OrderDate, TotalAmount) 
+-- Inserting Sample Data into Orders Table
+INSERT INTO Orders (OrderID, CustomerName, OrderDate, TotalAmount)
 VALUES
 (1, 'John Doe', '2024-01-15', 1500.00),
 (2, 'Jane Smith', '2024-02-10', 2000.00),
